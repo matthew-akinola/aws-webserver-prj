@@ -67,7 +67,7 @@ resource "aws_iam_policy_attachment" "policy_attachments" {
   name       = "admin-policy"
   policy_arn = aws_iam_policy.admin_access.arn
   users = [
-    "arn:aws:iam::${local.secret_map["account_no"]}:group/devops"
+    "arn:aws:iam::${local.secret_map["account_no"]}:group/admin"
   ]
 }
 

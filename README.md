@@ -13,6 +13,11 @@ The architecture consists of the following components:
 5. Auto Scaling Group: Automatically adjusts the number of EC2 instances based on the load to maintain performance and availability.
 6. RDS Instance: A managed relational database service for storing application data.
 
+# Security Checks
+- Backend configuration was stored in S3 bucket
+- Secret credentials were managed using Secret Manager
+- Nginx was configured as a reverse proxy to direct incoming traffic from external load balancer to internal load balancer
+
 # Prerequisites
 
 Before executing the Terraform scripts, ensure that you have the following prerequisites:
@@ -40,7 +45,10 @@ To set up the AWS environment, follow these steps:
 - `terraform plan` 
 7. Apply the Infrastructure: Apply the Terraform execution plan to create the AWS environment:
 - `terraform apply`
-Enter `yes` when prompted to confirm the execution.
+- Enter `yes` when prompted to confirm the execution.
 8. Wait for Provisioning: Terraform will provision the infrastructure components. This process may take a few minutes. Once completed, you will see the output with the details of the created resources.
 9. Access the Web Application: Once the infrastructure is provisioned, you can access the web application by using the load balancer's DNS name or IP address. 
 
+# NOTE
+- A TLS certificate was configured in the `modules/ALB`, reconfigure it for your domain. This enables an HTTPS request. 
+- Comment out the backend configuration in the `backend.tf` and apply. After successful `terraform apply`, uncomment the configuration and apply again. This will ensure S3 bucket is created first
