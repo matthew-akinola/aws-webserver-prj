@@ -29,7 +29,7 @@ AWS CLI: Install the AWS Command Line Interface by following the instructions in
 
 To set up the AWS environment, follow these steps:
 1. Clone the Repository: Clone this repository to your local machine using the following command:
-- `git clone https://github.com/your-username/your-repo.git`
+- `git clone https://github.com/matthew-akinola/aws-webserver-prj.git`
 
 2. Configure AWS Credentials: Configure your AWS credentials by running the following command and providing your AWS access key ID and secret access key:
 - `aws configure`
