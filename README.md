@@ -24,23 +24,23 @@ AWS CLI: Install the AWS Command Line Interface by following the instructions in
 
 To set up the AWS environment, follow these steps:
 1. Clone the Repository: Clone this repository to your local machine using the following command:
-- git clone https://github.com/your-username/your-repo.git
+- `git clone https://github.com/your-username/your-repo.git`
 
 2. Configure AWS Credentials: Configure your AWS credentials by running the following command and providing your AWS access key ID and secret access key:
-- aws configure
+- `aws configure`
 
 3. Initialize Terraform: Change into the cloned repository directory and initialize Terraform by running the following command:
-- cd your-repo
-- terraform init
+- `cd your-repo`
+- `terraform init`
 
 4. Review and Customize Variables: Open the variables.tf file and review the variables. Customize them according to your requirements. For example, you can modify the region, instance type, database engine, etc.
 5. Validate the Configuration: Run the following command to validate the Terraform configuration:
-- terraform validate
+- `terraform validate`
 6. Plan the Infrastructure: Generate an execution plan to review the changes that Terraform will make to your infrastructure:
-- terraform plan 
+- `terraform plan` 
 7. Apply the Infrastructure: Apply the Terraform execution plan to create the AWS environment:
-- terraform apply
-Enter yes when prompted to confirm the execution.
+- `terraform apply`
+Enter `yes` when prompted to confirm the execution.
 8. Wait for Provisioning: Terraform will provision the infrastructure components. This process may take a few minutes. Once completed, you will see the output with the details of the created resources.
 9. Access the Web Application: Once the infrastructure is provisioned, you can access the web application by using the load balancer's DNS name or IP address. 
 
