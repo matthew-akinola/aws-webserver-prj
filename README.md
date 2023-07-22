@@ -12,10 +12,12 @@ The architecture consists of the following components:
 4. Load Balancer: Distributes incoming traffic across multiple EC2 instances to ensure high availability and scalability.
 5. Auto Scaling Group: Automatically adjusts the number of EC2 instances based on the load to maintain performance and availability.
 6. RDS Instance: A managed relational database service for storing application data.
+7. Cloudwatch: Collects monitoring and operational data in the form of logs, metrics, and events.
 
 # Security Checks
 - Backend configuration was stored in S3 bucket
 - Secret credentials were managed using Secret Manager
+- Traffic is managed via two load balancers: an external one directing to an Nginx reverse proxy, and an internal one interfacing with the web servers.
 - Nginx was configured as a reverse proxy to direct incoming traffic from external load balancer to internal load balancer
 
 # Prerequisites
