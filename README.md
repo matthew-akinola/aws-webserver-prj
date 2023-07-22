@@ -37,7 +37,7 @@ To set up the AWS environment, follow these steps:
 - `aws configure`
 
 3. Initialize Terraform: Change into the cloned repository directory and initialize Terraform by running the following command:
-- `cd your-repo`
+- `cd aws-webserver-prjs`
 - `terraform init`
 
 4. Review and Customize Variables: Open the variables.tf file and review the variables. Customize them according to your requirements. For example, you can modify the region, instance type, database engine, etc.
